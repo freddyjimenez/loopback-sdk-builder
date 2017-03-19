@@ -5,30 +5,30 @@ import {
 
 declare var Object: any;
 export interface AccountInterface {
-  realm?: string;
-  username?: string;
-  password: string;
-  email: string;
-  emailVerified?: boolean;
-  verificationToken?: string;
-  id?: number;
-  createdAt: Date;
-  updatedAt: Date;
+  "realm"?: string;
+  "username"?: string;
+  "password": string;
+  "email": string;
+  "emailVerified"?: boolean;
+  "verificationToken"?: string;
+  "id"?: number;
+  "createdAt": Date;
+  "updatedAt": Date;
   accessTokens?: any[];
   rooms?: Room[];
   administrations?: Room[];
 }
 
 export class Account implements AccountInterface {
-  realm: string;
-  username: string;
-  password: string;
-  email: string;
-  emailVerified: boolean;
-  verificationToken: string;
-  id: number;
-  createdAt: Date;
-  updatedAt: Date;
+  "realm": string;
+  "username": string;
+  "password": string;
+  "email": string;
+  "emailVerified": boolean;
+  "verificationToken": string;
+  "id": number;
+  "createdAt": Date;
+  "updatedAt": Date;
   accessTokens: any[];
   rooms: Room[];
   administrations: Room[];
@@ -50,7 +50,7 @@ export class Account implements AccountInterface {
   **/
   public static factory(data: AccountInterface): Account{
     return new Account(data);
-  }  
+  }
   /**
   * @method getModelDefinition
   * @author Julien Ledun
@@ -63,39 +63,39 @@ export class Account implements AccountInterface {
       name: 'Account',
       plural: 'accounts',
       properties: {
-        realm: {
+        "realm": {
           name: 'realm',
           type: 'string'
         },
-        username: {
+        "username": {
           name: 'username',
           type: 'string'
         },
-        password: {
+        "password": {
           name: 'password',
           type: 'string'
         },
-        email: {
+        "email": {
           name: 'email',
           type: 'string'
         },
-        emailVerified: {
+        "emailVerified": {
           name: 'emailVerified',
           type: 'boolean'
         },
-        verificationToken: {
+        "verificationToken": {
           name: 'verificationToken',
           type: 'string'
         },
-        id: {
+        "id": {
           name: 'id',
           type: 'number'
         },
-        createdAt: {
+        "createdAt": {
           name: 'createdAt',
           type: 'Date'
         },
-        updatedAt: {
+        "updatedAt": {
           name: 'updatedAt',
           type: 'Date'
         },

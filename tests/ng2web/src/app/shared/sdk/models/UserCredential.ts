@@ -2,31 +2,31 @@
 
 declare var Object: any;
 export interface UserCredentialInterface {
-  provider?: string;
-  authScheme?: string;
-  externalId?: string;
-  profile?: any;
-  credentials?: string;
-  created?: Date;
-  modified?: Date;
-  userId?: any;
-  id?: number;
-  createdAt: Date;
-  updatedAt: Date;
+  "provider"?: string;
+  "authScheme"?: string;
+  "externalId"?: string;
+  "profile"?: any;
+  "credentials"?: string;
+  "created"?: Date;
+  "modified"?: Date;
+  "userId"?: any;
+  "id"?: number;
+  "createdAt": Date;
+  "updatedAt": Date;
 }
 
 export class UserCredential implements UserCredentialInterface {
-  provider: string;
-  authScheme: string;
-  externalId: string;
-  profile: any;
-  credentials: string;
-  created: Date;
-  modified: Date;
-  userId: any;
-  id: number;
-  createdAt: Date;
-  updatedAt: Date;
+  "provider": string;
+  "authScheme": string;
+  "externalId": string;
+  "profile": any;
+  "credentials": string;
+  "created": Date;
+  "modified": Date;
+  "userId": any;
+  "id": number;
+  "createdAt": Date;
+  "updatedAt": Date;
   constructor(data?: UserCredentialInterface) {
     Object.assign(this, data);
   }
@@ -45,7 +45,7 @@ export class UserCredential implements UserCredentialInterface {
   **/
   public static factory(data: UserCredentialInterface): UserCredential{
     return new UserCredential(data);
-  }  
+  }
   /**
   * @method getModelDefinition
   * @author Julien Ledun
@@ -58,53 +58,53 @@ export class UserCredential implements UserCredentialInterface {
       name: 'UserCredential',
       plural: 'user-credentials',
       properties: {
-        provider: {
+        "provider": {
           name: 'provider',
           type: 'string',
           default: 'authScheme'
         },
-        authScheme: {
+        "authScheme": {
           name: 'authScheme',
           type: 'string',
           default: ''
         },
-        externalId: {
+        "externalId": {
           name: 'externalId',
           type: 'string',
           default: ''
         },
-        profile: {
+        "profile": {
           name: 'profile',
           type: 'any',
           default: <any>null
         },
-        credentials: {
+        "credentials": {
           name: 'credentials',
           type: 'string',
           default: ''
         },
-        created: {
+        "created": {
           name: 'created',
           type: 'Date'
         },
-        modified: {
+        "modified": {
           name: 'modified',
           type: 'Date',
           default: new Date(0)
         },
-        userId: {
+        "userId": {
           name: 'userId',
           type: 'any'
         },
-        id: {
+        "id": {
           name: 'id',
           type: 'number'
         },
-        createdAt: {
+        "createdAt": {
           name: 'createdAt',
           type: 'Date'
         },
-        updatedAt: {
+        "updatedAt": {
           name: 'updatedAt',
           type: 'Date'
         },

@@ -8,10 +8,10 @@ import {
 
 declare var Object: any;
 export interface RoomInterface {
-  name: string;
-  id?: number;
-  createdAt?: Date;
-  updatedAt?: Date;
+  "name": string;
+  "id"?: number;
+  "createdAt"?: Date;
+  "updatedAt"?: Date;
   messages?: Message[];
   likes?: Like[];
   categories?: Category[];
@@ -20,10 +20,10 @@ export interface RoomInterface {
 }
 
 export class Room implements RoomInterface {
-  name: string;
-  id: number;
-  createdAt: Date;
-  updatedAt: Date;
+  "name": string;
+  "id": number;
+  "createdAt": Date;
+  "updatedAt": Date;
   messages: Message[];
   likes: Like[];
   categories: Category[];
@@ -47,7 +47,7 @@ export class Room implements RoomInterface {
   **/
   public static factory(data: RoomInterface): Room{
     return new Room(data);
-  }  
+  }
   /**
   * @method getModelDefinition
   * @author Julien Ledun
@@ -60,20 +60,20 @@ export class Room implements RoomInterface {
       name: 'Room',
       plural: 'rooms',
       properties: {
-        name: {
+        "name": {
           name: 'name',
           type: 'string',
           default: ''
         },
-        id: {
+        "id": {
           name: 'id',
           type: 'number'
         },
-        createdAt: {
+        "createdAt": {
           name: 'createdAt',
           type: 'Date'
         },
-        updatedAt: {
+        "updatedAt": {
           name: 'updatedAt',
           type: 'Date'
         },

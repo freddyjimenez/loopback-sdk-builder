@@ -2,15 +2,15 @@
 
 declare var Object: any;
 export interface StorageInterface {
-  id?: number;
-  createdAt: Date;
-  updatedAt: Date;
+  "id"?: number;
+  "createdAt": Date;
+  "updatedAt": Date;
 }
 
 export class Storage implements StorageInterface {
-  id: number;
-  createdAt: Date;
-  updatedAt: Date;
+  "id": number;
+  "createdAt": Date;
+  "updatedAt": Date;
   constructor(data?: StorageInterface) {
     Object.assign(this, data);
   }
@@ -29,7 +29,7 @@ export class Storage implements StorageInterface {
   **/
   public static factory(data: StorageInterface): Storage{
     return new Storage(data);
-  }  
+  }
   /**
   * @method getModelDefinition
   * @author Julien Ledun
@@ -42,15 +42,15 @@ export class Storage implements StorageInterface {
       name: 'Storage',
       plural: 'storages',
       properties: {
-        id: {
+        "id": {
           name: 'id',
           type: 'number'
         },
-        createdAt: {
+        "createdAt": {
           name: 'createdAt',
           type: 'Date'
         },
-        updatedAt: {
+        "updatedAt": {
           name: 'updatedAt',
           type: 'Date'
         },

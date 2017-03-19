@@ -6,21 +6,21 @@ import {
 
 declare var Object: any;
 export interface RoomAccountInterface {
-  id?: number;
-  accountId?: number;
-  roomId?: number;
-  createdAt: Date;
-  updatedAt: Date;
+  "id"?: number;
+  "accountId"?: number;
+  "roomId"?: number;
+  "createdAt": Date;
+  "updatedAt": Date;
   account?: Account;
   room?: Room;
 }
 
 export class RoomAccount implements RoomAccountInterface {
-  id: number;
-  accountId: number;
-  roomId: number;
-  createdAt: Date;
-  updatedAt: Date;
+  "id": number;
+  "accountId": number;
+  "roomId": number;
+  "createdAt": Date;
+  "updatedAt": Date;
   account: Account;
   room: Room;
   constructor(data?: RoomAccountInterface) {
@@ -41,7 +41,7 @@ export class RoomAccount implements RoomAccountInterface {
   **/
   public static factory(data: RoomAccountInterface): RoomAccount{
     return new RoomAccount(data);
-  }  
+  }
   /**
   * @method getModelDefinition
   * @author Julien Ledun
@@ -54,23 +54,23 @@ export class RoomAccount implements RoomAccountInterface {
       name: 'RoomAccount',
       plural: 'room-accounts',
       properties: {
-        id: {
+        "id": {
           name: 'id',
           type: 'number'
         },
-        accountId: {
+        "accountId": {
           name: 'accountId',
           type: 'number'
         },
-        roomId: {
+        "roomId": {
           name: 'roomId',
           type: 'number'
         },
-        createdAt: {
+        "createdAt": {
           name: 'createdAt',
           type: 'Date'
         },
-        updatedAt: {
+        "updatedAt": {
           name: 'updatedAt',
           type: 'Date'
         },

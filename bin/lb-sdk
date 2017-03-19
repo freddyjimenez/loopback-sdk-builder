@@ -18,7 +18,8 @@ var chalk = require('chalk');
 /**
  * CLI Options Description
  */
-var argv = optimist
+var argv=[];
+/*var argv = optimist
   .usage('\n******************************************* LoopBack SDK Builder 2.0 *******************************************\n' +
   '\nGenerate Client SDK for your LoopBack Application.' +
   '\nUsage:' +
@@ -39,7 +40,7 @@ var argv = optimist
   .default('q', false)
   .alias({ u: 'url', m: 'module-name', l: 'library', i: 'io', d: 'driver', w: 'wipe', v: 'default-values', f: 'fireloop-only', q: 'quiet' })
   .demand(1)
-  .argv;
+  .argv;*/
 /**
  * Splash ACII Art
  */
@@ -80,7 +81,7 @@ if (!argv['q']) {
 /**
  * Set Reference For Main Options
  */
-var appFile = path.resolve(argv._[0]);
+var appFile = path.resolve("../ksd-v2/server/server.js");
 /**
  * Load and Boot LoopBack Application
  */
@@ -92,10 +93,10 @@ var context = {
   framework: argv['l'] || 'angular2',
   moduleName: argv['module-name'] || 'sdk',
   apiUrl: argv['url'] || app.get('restApiRoot') || '/api',
-  outputFolder: argv._[1],
-  isIo: argv['i'] || 'disabled',
+  outputFolder: "../ksd-v2/client/app/shared/sdk",
+  isIo: argv['i'] || 'enabled',
   driver: argv['d'] || 'ng2web',
-  wipe: argv['w'] || 'disabled',
+  wipe: argv['w'] || 'enabled',
   defaultValue: argv['v'] || 'disabled',
   fireloopOnly: argv['f'] || 'disabled',
   quiet: argv['q'] || false
