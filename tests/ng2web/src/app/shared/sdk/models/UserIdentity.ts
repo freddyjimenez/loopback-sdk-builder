@@ -5,32 +5,32 @@ import {
 
 declare var Object: any;
 export interface UserIdentityInterface {
-  "provider"?: string;
-  "authScheme"?: string;
-  "externalId"?: string;
+  "provider"?: any;
+  "authScheme"?: any;
+  "externalId"?: any;
   "profile"?: any;
-  "credentials"?: string;
-  "created"?: Date;
-  "modified"?: Date;
-  "userId"?: number;
-  "id"?: number;
-  "createdAt": Date;
-  "updatedAt": Date;
+  "credentials"?: any;
+  "created"?: any;
+  "modified"?: any;
+  "userId"?: any;
+  "id"?: any;
+  "createdAt": any;
+  "updatedAt": any;
   user?: User;
 }
 
 export class UserIdentity implements UserIdentityInterface {
-  "provider": string;
-  "authScheme": string;
-  "externalId": string;
+  "provider": any;
+  "authScheme": any;
+  "externalId": any;
   "profile": any;
-  "credentials": string;
-  "created": Date;
-  "modified": Date;
-  "userId": number;
-  "id": number;
-  "createdAt": Date;
-  "updatedAt": Date;
+  "credentials": any;
+  "created": any;
+  "modified": any;
+  "userId": any;
+  "id": any;
+  "createdAt": any;
+  "updatedAt": any;
   user: User;
   constructor(data?: UserIdentityInterface) {
     Object.assign(this, data);
@@ -65,17 +65,17 @@ export class UserIdentity implements UserIdentityInterface {
       properties: {
         "provider": {
           name: 'provider',
-          type: 'string',
+          type: 'any',
           default: 'authScheme'
         },
         "authScheme": {
           name: 'authScheme',
-          type: 'string',
+          type: 'any',
           default: ''
         },
         "externalId": {
           name: 'externalId',
-          type: 'string',
+          type: 'any',
           default: ''
         },
         "profile": {
@@ -85,32 +85,32 @@ export class UserIdentity implements UserIdentityInterface {
         },
         "credentials": {
           name: 'credentials',
-          type: 'string',
+          type: 'any',
           default: ''
         },
         "created": {
           name: 'created',
-          type: 'Date'
+          type: 'any'
         },
         "modified": {
           name: 'modified',
-          type: 'Date'
+          type: 'any'
         },
         "userId": {
           name: 'userId',
-          type: 'number'
+          type: 'any'
         },
         "id": {
           name: 'id',
-          type: 'number'
+          type: 'any'
         },
         "createdAt": {
           name: 'createdAt',
-          type: 'Date'
+          type: 'any'
         },
         "updatedAt": {
           name: 'updatedAt',
-          type: 'Date'
+          type: 'any'
         },
       },
       relations: {

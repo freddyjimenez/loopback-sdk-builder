@@ -6,21 +6,21 @@ import {
 
 declare var Object: any;
 export interface RoomAdminInterface {
-  "id"?: number;
-  "adminId"?: number;
-  "administrationId"?: number;
-  "createdAt": Date;
-  "updatedAt": Date;
+  "id"?: any;
+  "adminId"?: any;
+  "administrationId"?: any;
+  "createdAt": any;
+  "updatedAt": any;
   account?: Account;
   room?: Room;
 }
 
 export class RoomAdmin implements RoomAdminInterface {
-  "id": number;
-  "adminId": number;
-  "administrationId": number;
-  "createdAt": Date;
-  "updatedAt": Date;
+  "id": any;
+  "adminId": any;
+  "administrationId": any;
+  "createdAt": any;
+  "updatedAt": any;
   account: Account;
   room: Room;
   constructor(data?: RoomAdminInterface) {
@@ -56,23 +56,23 @@ export class RoomAdmin implements RoomAdminInterface {
       properties: {
         "id": {
           name: 'id',
-          type: 'number'
+          type: 'any'
         },
         "adminId": {
           name: 'adminId',
-          type: 'number'
+          type: 'any'
         },
         "administrationId": {
           name: 'administrationId',
-          type: 'number'
+          type: 'any'
         },
         "createdAt": {
           name: 'createdAt',
-          type: 'Date'
+          type: 'any'
         },
         "updatedAt": {
           name: 'updatedAt',
-          type: 'Date'
+          type: 'any'
         },
       },
       relations: {

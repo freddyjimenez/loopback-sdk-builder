@@ -2,15 +2,15 @@
 
 declare var Object: any;
 export interface CoreInterface {
-  "id"?: number;
-  "createdAt": Date;
-  "updatedAt": Date;
+  "id"?: any;
+  "createdAt": any;
+  "updatedAt": any;
 }
 
 export class Core implements CoreInterface {
-  "id": number;
-  "createdAt": Date;
-  "updatedAt": Date;
+  "id": any;
+  "createdAt": any;
+  "updatedAt": any;
   constructor(data?: CoreInterface) {
     Object.assign(this, data);
   }
@@ -44,15 +44,15 @@ export class Core implements CoreInterface {
       properties: {
         "id": {
           name: 'id',
-          type: 'number'
+          type: 'any'
         },
         "createdAt": {
           name: 'createdAt',
-          type: 'Date'
+          type: 'any'
         },
         "updatedAt": {
           name: 'updatedAt',
-          type: 'Date'
+          type: 'any'
         },
       },
       relations: {

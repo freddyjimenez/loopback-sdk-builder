@@ -2,27 +2,27 @@
 
 declare var Object: any;
 export interface ApplicationCredentialInterface {
-  "provider"?: string;
-  "authScheme"?: string;
-  "credentials"?: string;
-  "created"?: Date;
-  "modified"?: Date;
+  "provider"?: any;
+  "authScheme"?: any;
+  "credentials"?: any;
+  "created"?: any;
+  "modified"?: any;
   "userId"?: any;
-  "id"?: number;
-  "createdAt": Date;
-  "updatedAt": Date;
+  "id"?: any;
+  "createdAt": any;
+  "updatedAt": any;
 }
 
 export class ApplicationCredential implements ApplicationCredentialInterface {
-  "provider": string;
-  "authScheme": string;
-  "credentials": string;
-  "created": Date;
-  "modified": Date;
+  "provider": any;
+  "authScheme": any;
+  "credentials": any;
+  "created": any;
+  "modified": any;
   "userId": any;
-  "id": number;
-  "createdAt": Date;
-  "updatedAt": Date;
+  "id": any;
+  "createdAt": any;
+  "updatedAt": any;
   constructor(data?: ApplicationCredentialInterface) {
     Object.assign(this, data);
   }
@@ -56,26 +56,26 @@ export class ApplicationCredential implements ApplicationCredentialInterface {
       properties: {
         "provider": {
           name: 'provider',
-          type: 'string',
+          type: 'any',
           default: 'authScheme'
         },
         "authScheme": {
           name: 'authScheme',
-          type: 'string',
+          type: 'any',
           default: ''
         },
         "credentials": {
           name: 'credentials',
-          type: 'string',
+          type: 'any',
           default: ''
         },
         "created": {
           name: 'created',
-          type: 'Date'
+          type: 'any'
         },
         "modified": {
           name: 'modified',
-          type: 'Date'
+          type: 'any'
         },
         "userId": {
           name: 'userId',
@@ -83,15 +83,15 @@ export class ApplicationCredential implements ApplicationCredentialInterface {
         },
         "id": {
           name: 'id',
-          type: 'number'
+          type: 'any'
         },
         "createdAt": {
           name: 'createdAt',
-          type: 'Date'
+          type: 'any'
         },
         "updatedAt": {
           name: 'updatedAt',
-          type: 'Date'
+          type: 'any'
         },
       },
       relations: {

@@ -6,21 +6,21 @@ import {
 
 declare var Object: any;
 export interface RoomAccountInterface {
-  "id"?: number;
-  "accountId"?: number;
-  "roomId"?: number;
-  "createdAt": Date;
-  "updatedAt": Date;
+  "id"?: any;
+  "accountId"?: any;
+  "roomId"?: any;
+  "createdAt": any;
+  "updatedAt": any;
   account?: Account;
   room?: Room;
 }
 
 export class RoomAccount implements RoomAccountInterface {
-  "id": number;
-  "accountId": number;
-  "roomId": number;
-  "createdAt": Date;
-  "updatedAt": Date;
+  "id": any;
+  "accountId": any;
+  "roomId": any;
+  "createdAt": any;
+  "updatedAt": any;
   account: Account;
   room: Room;
   constructor(data?: RoomAccountInterface) {
@@ -56,23 +56,23 @@ export class RoomAccount implements RoomAccountInterface {
       properties: {
         "id": {
           name: 'id',
-          type: 'number'
+          type: 'any'
         },
         "accountId": {
           name: 'accountId',
-          type: 'number'
+          type: 'any'
         },
         "roomId": {
           name: 'roomId',
-          type: 'number'
+          type: 'any'
         },
         "createdAt": {
           name: 'createdAt',
-          type: 'Date'
+          type: 'any'
         },
         "updatedAt": {
           name: 'updatedAt',
-          type: 'Date'
+          type: 'any'
         },
       },
       relations: {

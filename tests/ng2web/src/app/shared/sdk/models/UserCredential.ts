@@ -2,31 +2,31 @@
 
 declare var Object: any;
 export interface UserCredentialInterface {
-  "provider"?: string;
-  "authScheme"?: string;
-  "externalId"?: string;
+  "provider"?: any;
+  "authScheme"?: any;
+  "externalId"?: any;
   "profile"?: any;
-  "credentials"?: string;
-  "created"?: Date;
-  "modified"?: Date;
+  "credentials"?: any;
+  "created"?: any;
+  "modified"?: any;
   "userId"?: any;
-  "id"?: number;
-  "createdAt": Date;
-  "updatedAt": Date;
+  "id"?: any;
+  "createdAt": any;
+  "updatedAt": any;
 }
 
 export class UserCredential implements UserCredentialInterface {
-  "provider": string;
-  "authScheme": string;
-  "externalId": string;
+  "provider": any;
+  "authScheme": any;
+  "externalId": any;
   "profile": any;
-  "credentials": string;
-  "created": Date;
-  "modified": Date;
+  "credentials": any;
+  "created": any;
+  "modified": any;
   "userId": any;
-  "id": number;
-  "createdAt": Date;
-  "updatedAt": Date;
+  "id": any;
+  "createdAt": any;
+  "updatedAt": any;
   constructor(data?: UserCredentialInterface) {
     Object.assign(this, data);
   }
@@ -60,17 +60,17 @@ export class UserCredential implements UserCredentialInterface {
       properties: {
         "provider": {
           name: 'provider',
-          type: 'string',
+          type: 'any',
           default: 'authScheme'
         },
         "authScheme": {
           name: 'authScheme',
-          type: 'string',
+          type: 'any',
           default: ''
         },
         "externalId": {
           name: 'externalId',
-          type: 'string',
+          type: 'any',
           default: ''
         },
         "profile": {
@@ -80,16 +80,16 @@ export class UserCredential implements UserCredentialInterface {
         },
         "credentials": {
           name: 'credentials',
-          type: 'string',
+          type: 'any',
           default: ''
         },
         "created": {
           name: 'created',
-          type: 'Date'
+          type: 'any'
         },
         "modified": {
           name: 'modified',
-          type: 'Date',
+          type: 'any',
           default: new Date(0)
         },
         "userId": {
@@ -98,15 +98,15 @@ export class UserCredential implements UserCredentialInterface {
         },
         "id": {
           name: 'id',
-          type: 'number'
+          type: 'any'
         },
         "createdAt": {
           name: 'createdAt',
-          type: 'Date'
+          type: 'any'
         },
         "updatedAt": {
           name: 'updatedAt',
-          type: 'Date'
+          type: 'any'
         },
       },
       relations: {

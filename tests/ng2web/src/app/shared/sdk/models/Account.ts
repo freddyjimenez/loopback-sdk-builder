@@ -5,30 +5,30 @@ import {
 
 declare var Object: any;
 export interface AccountInterface {
-  "realm"?: string;
-  "username"?: string;
-  "password": string;
-  "email": string;
-  "emailVerified"?: boolean;
-  "verificationToken"?: string;
-  "id"?: number;
-  "createdAt": Date;
-  "updatedAt": Date;
+  "realm"?: any;
+  "username"?: any;
+  "password": any;
+  "email": any;
+  "emailVerified"?: any;
+  "verificationToken"?: any;
+  "id"?: any;
+  "createdAt": any;
+  "updatedAt": any;
   accessTokens?: any[];
   rooms?: Room[];
   administrations?: Room[];
 }
 
 export class Account implements AccountInterface {
-  "realm": string;
-  "username": string;
-  "password": string;
-  "email": string;
-  "emailVerified": boolean;
-  "verificationToken": string;
-  "id": number;
-  "createdAt": Date;
-  "updatedAt": Date;
+  "realm": any;
+  "username": any;
+  "password": any;
+  "email": any;
+  "emailVerified": any;
+  "verificationToken": any;
+  "id": any;
+  "createdAt": any;
+  "updatedAt": any;
   accessTokens: any[];
   rooms: Room[];
   administrations: Room[];
@@ -65,39 +65,39 @@ export class Account implements AccountInterface {
       properties: {
         "realm": {
           name: 'realm',
-          type: 'string'
+          type: 'any'
         },
         "username": {
           name: 'username',
-          type: 'string'
+          type: 'any'
         },
         "password": {
           name: 'password',
-          type: 'string'
+          type: 'any'
         },
         "email": {
           name: 'email',
-          type: 'string'
+          type: 'any'
         },
         "emailVerified": {
           name: 'emailVerified',
-          type: 'boolean'
+          type: 'any'
         },
         "verificationToken": {
           name: 'verificationToken',
-          type: 'string'
+          type: 'any'
         },
         "id": {
           name: 'id',
-          type: 'number'
+          type: 'any'
         },
         "createdAt": {
           name: 'createdAt',
-          type: 'Date'
+          type: 'any'
         },
         "updatedAt": {
           name: 'updatedAt',
-          type: 'Date'
+          type: 'any'
         },
       },
       relations: {

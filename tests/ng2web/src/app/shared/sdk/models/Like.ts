@@ -6,23 +6,23 @@ import {
 
 declare var Object: any;
 export interface LikeInterface {
-  "set": boolean;
-  "id"?: number;
-  "createdAt": Date;
-  "updatedAt": Date;
-  "messageId"?: number;
-  "roomId"?: number;
+  "set": any;
+  "id"?: any;
+  "createdAt": any;
+  "updatedAt": any;
+  "messageId"?: any;
+  "roomId"?: any;
   message?: Message;
   room?: Room;
 }
 
 export class Like implements LikeInterface {
-  "set": boolean;
-  "id": number;
-  "createdAt": Date;
-  "updatedAt": Date;
-  "messageId": number;
-  "roomId": number;
+  "set": any;
+  "id": any;
+  "createdAt": any;
+  "updatedAt": any;
+  "messageId": any;
+  "roomId": any;
   message: Message;
   room: Room;
   constructor(data?: LikeInterface) {
@@ -58,28 +58,28 @@ export class Like implements LikeInterface {
       properties: {
         "set": {
           name: 'set',
-          type: 'boolean',
+          type: 'any',
           default: true
         },
         "id": {
           name: 'id',
-          type: 'number'
+          type: 'any'
         },
         "createdAt": {
           name: 'createdAt',
-          type: 'Date'
+          type: 'any'
         },
         "updatedAt": {
           name: 'updatedAt',
-          type: 'Date'
+          type: 'any'
         },
         "messageId": {
           name: 'messageId',
-          type: 'number'
+          type: 'any'
         },
         "roomId": {
           name: 'roomId',
-          type: 'number'
+          type: 'any'
         },
       },
       relations: {

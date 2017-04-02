@@ -8,10 +8,10 @@ import {
 
 declare var Object: any;
 export interface RoomInterface {
-  "name": string;
-  "id"?: number;
-  "createdAt"?: Date;
-  "updatedAt"?: Date;
+  "name": any;
+  "id"?: any;
+  "createdAt"?: any;
+  "updatedAt"?: any;
   messages?: Message[];
   likes?: Like[];
   categories?: Category[];
@@ -20,10 +20,10 @@ export interface RoomInterface {
 }
 
 export class Room implements RoomInterface {
-  "name": string;
-  "id": number;
-  "createdAt": Date;
-  "updatedAt": Date;
+  "name": any;
+  "id": any;
+  "createdAt": any;
+  "updatedAt": any;
   messages: Message[];
   likes: Like[];
   categories: Category[];
@@ -62,20 +62,20 @@ export class Room implements RoomInterface {
       properties: {
         "name": {
           name: 'name',
-          type: 'string',
+          type: 'any',
           default: ''
         },
         "id": {
           name: 'id',
-          type: 'number'
+          type: 'any'
         },
         "createdAt": {
           name: 'createdAt',
-          type: 'Date'
+          type: 'any'
         },
         "updatedAt": {
           name: 'updatedAt',
-          type: 'Date'
+          type: 'any'
         },
       },
       relations: {

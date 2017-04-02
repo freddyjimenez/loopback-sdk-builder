@@ -2,24 +2,24 @@
 
 declare var Object: any;
 export interface UserInterface {
-  "realm"?: string;
-  "username"?: string;
-  "password": string;
-  "email": string;
-  "emailVerified"?: boolean;
-  "verificationToken"?: string;
-  "id"?: number;
+  "realm"?: any;
+  "username"?: any;
+  "password": any;
+  "email": any;
+  "emailVerified"?: any;
+  "verificationToken"?: any;
+  "id"?: any;
   accessTokens?: any[];
 }
 
 export class User implements UserInterface {
-  "realm": string;
-  "username": string;
-  "password": string;
-  "email": string;
-  "emailVerified": boolean;
-  "verificationToken": string;
-  "id": number;
+  "realm": any;
+  "username": any;
+  "password": any;
+  "email": any;
+  "emailVerified": any;
+  "verificationToken": any;
+  "id": any;
   accessTokens: any[];
   constructor(data?: UserInterface) {
     Object.assign(this, data);
@@ -54,31 +54,31 @@ export class User implements UserInterface {
       properties: {
         "realm": {
           name: 'realm',
-          type: 'string'
+          type: 'any'
         },
         "username": {
           name: 'username',
-          type: 'string'
+          type: 'any'
         },
         "password": {
           name: 'password',
-          type: 'string'
+          type: 'any'
         },
         "email": {
           name: 'email',
-          type: 'string'
+          type: 'any'
         },
         "emailVerified": {
           name: 'emailVerified',
-          type: 'boolean'
+          type: 'any'
         },
         "verificationToken": {
           name: 'verificationToken',
-          type: 'string'
+          type: 'any'
         },
         "id": {
           name: 'id',
-          type: 'number'
+          type: 'any'
         },
       },
       relations: {
